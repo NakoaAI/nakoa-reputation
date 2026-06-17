@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nakoa — AI-powered review management for local businesses. Monitor Google, Yelp, and Facebook reviews. Auto-draft responses. Get instant alerts.">
-<title>Nakoa — AI Review Management for Local Business</title>
+<meta name="description" content="Nakoa — AI-native, Google-first review management for local business. The best AI review responses plus review intelligence — insights, trends, and live competitor tracking — at a fraction of enterprise price.">
+<title>Nakoa — AI-Native Review Management, Google-First</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -188,7 +188,9 @@ nav{position:sticky;top:0;z-index:200;height:64px;padding:0 40px;display:flex;al
 .faq-a{font-size:14px;color:var(--ink-3);line-height:1.68}
 
 /* CTA */
-.cta-wrap{background:var(--blue);border-radius:var(--r-xl);padding:72px 56px;text-align:center;position:relative;overflow:hidden;margin:0 40px}
+.cta-wrap{background:var(--grad);border-radius:var(--r-xl);padding:72px 56px;text-align:center;position:relative;overflow:hidden;margin:0 40px}
+.cta-wrap .reassure{margin-top:18px;color:rgba(255,255,255,.72)}
+.cta-wrap .reassure .rc{color:#fff}.cta-wrap .reassure .rs{color:rgba(255,255,255,.35)}
 .cta-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(255,255,255,.07),transparent 65%)}
 .cta-wrap h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.03em;color:white;margin-bottom:14px;position:relative;z-index:1}
 .cta-wrap p{font-size:17px;color:rgba(255,255,255,.72);max-width:460px;margin:0 auto 36px;line-height:1.65;position:relative;z-index:1}
@@ -224,7 +226,56 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
   .hero-sub{font-size:16px}
   .price-grid{grid-template-columns:1fr}
   .faq-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .midcta{padding:0 20px 64px}
 }
+
+/* ── Revamp: brand gradient, CTAs, badges, motion ── */
+:root{--grad:linear-gradient(135deg,#1e6ef4 0%,#0d9488 100%);--grad-soft:linear-gradient(135deg,rgba(30,110,244,.10),rgba(13,148,136,.10))}
+/* gradient primary actions everywhere */
+.btn-sm,.btn-lg.primary,.price-btn.solid,.btn-white,.mobile-cta{background:var(--grad)!important}
+.btn-lg.primary{box-shadow:0 4px 18px rgba(30,110,244,.32)}
+.btn-lg.primary:hover{box-shadow:0 8px 28px rgba(13,148,136,.32)}
+/* reassurance line under a CTA */
+.reassure{display:flex;gap:8px;align-items:center;justify-content:center;font-size:13px;color:var(--ink-4);flex-wrap:wrap;margin-top:14px}
+.reassure .rc{color:var(--teal);font-weight:700}
+.reassure .rs{color:var(--rule)}
+.hero-sub .grad-ink{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:600}
+/* live / coming-soon status pills */
+.soon{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-4);background:var(--rule-2);border:1px solid var(--rule);border-radius:100px;padding:2px 9px;margin-left:8px}
+.live{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--green);background:var(--green-bg);border-radius:100px;padding:2px 9px;margin-left:8px}
+.live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+/* mid-page gradient CTA band */
+.midcta{padding:0 40px 96px}
+.midcta-inner{background:var(--grad);border-radius:var(--r-xl);padding:56px 48px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--sh-lg)}
+.midcta-inner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 85% at 50% 0%,rgba(255,255,255,.16),transparent 60%)}
+.midcta h2{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.03em;color:#fff;margin-bottom:12px;position:relative;z-index:1}
+.midcta p{font-size:16px;color:rgba(255,255,255,.84);max-width:480px;margin:0 auto 26px;position:relative;z-index:1}
+.midcta .btn-white{background:#fff!important;color:var(--blue)}
+.midcta .reassure{position:relative;z-index:1;color:rgba(255,255,255,.72)}
+.midcta .reassure .rc{color:#fff}.midcta .reassure .rs{color:rgba(255,255,255,.35)}
+/* WHY NAKOA comparison */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
+.why-card{border-radius:var(--r-lg);padding:30px 32px}
+.why-card.them{background:var(--surface);border:1px solid var(--rule)}
+.why-card.us{background:#fff;border:1.5px solid var(--blue);box-shadow:0 0 0 4px var(--blue-3),var(--sh-md);position:relative}
+.why-badge{position:absolute;top:-13px;left:30px;background:var(--grad);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:100px;font-family:'Geist',sans-serif}
+.why-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:18px;font-weight:800;margin-bottom:4px}
+.why-card .why-sub{font-size:12.5px;color:var(--ink-4);margin-bottom:20px}
+.why-li{display:flex;align-items:flex-start;gap:11px;font-size:14px;color:var(--ink-2);margin-bottom:13px;line-height:1.5}
+.why-li svg{flex-shrink:0;margin-top:2px}
+/* founding-customer ribbon */
+.founding{margin-top:24px;border-radius:var(--r-lg);padding:24px 30px;background:var(--grad-soft);border:1px solid var(--blue-4);display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.founding-ico{width:46px;height:46px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(30,110,244,.3)}
+.founding-txt{flex:1;min-width:240px}
+.founding-txt h3{font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:800;margin-bottom:4px}
+.founding-txt p{font-size:13.5px;color:var(--ink-3);line-height:1.6}
+/* subtle motion */
+.hero-glow{animation:drift 16s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(22px)}}
+.mockup{animation:floaty 7s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){.hero-glow,.mockup,.badge-pulse,.eyebrow-dot,.live::before{animation:none!important}}
 </style>
 </head>
 <body>
@@ -270,21 +321,21 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
 <section class="hero">
   <div class="hero-glow"></div>
   <div class="hero-grid"></div>
-  <div class="hero-badge"><span class="badge-pulse"></span>AI-powered review management</div>
-  <h1>Stop losing customers<br>to <span class="accent">unanswered reviews.</span></h1>
-  <p class="hero-sub">Nakoa monitors every review across Google, Yelp, and Facebook — drafting perfect AI responses, alerting you instantly to problems, and protecting your rating. Automatically.</p>
+  <div class="hero-badge"><span class="badge-pulse"></span>Google-first · AI-native review management</div>
+  <h1>Master every <span class="accent">Google review</span><br>— automatically.</h1>
+  <p class="hero-sub">Nakoa drafts on-brand AI responses, surfaces the insights and trends hiding in your reviews, and tracks your competitors' ratings live. <span class="grad-ink">Enterprise-grade reputation tools at a fraction of the price.</span></p>
   <div class="hero-btns">
-    <a href="https://app.nakoa.ai/signup" class="btn-lg primary">Start free — no card needed</a>
+    <a href="https://app.nakoa.ai/signup" class="btn-lg primary">Start free trial</a>
     <a href="#how" class="btn-lg secondary">See how it works →</a>
   </div>
-  <div class="hero-micro">
-    <span class="micro-check">✓</span> <span>14-day free trial</span>
-    <span class="micro-sep">·</span>
-    <span class="micro-check">✓</span> <span>Setup in 5 minutes</span>
-    <span class="micro-sep">·</span>
-    <span class="micro-check">✓</span> <span>No credit card required</span>
-    <span class="micro-sep">·</span>
-    <span class="micro-check">✓</span> <span>Cancel anytime</span>
+  <div class="reassure">
+    <span class="rc">✓</span> <span>No credit card</span>
+    <span class="rs">·</span>
+    <span class="rc">✓</span> <span>14-day free trial</span>
+    <span class="rs">·</span>
+    <span class="rc">✓</span> <span>Setup in 5 minutes</span>
+    <span class="rs">·</span>
+    <span class="rc">✓</span> <span>Cancel anytime</span>
   </div>
 </section>
 
@@ -402,22 +453,18 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
 
 <!-- PLATFORM LOGOS -->
 <div class="logos-bar">
-  <span class="logos-label">Monitors reviews on</span>
+  <span class="logos-label">Review platforms</span>
   <div class="logo-pill">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-    Google Business
+    Google Business <span class="live">Live</span>
   </div>
   <div class="logo-pill">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#d32323"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="sans-serif">y</text></svg>
-    Yelp
+    Yelp <span class="soon">Coming soon</span>
   </div>
   <div class="logo-pill">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-    Facebook
-  </div>
-  <div class="logo-pill">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#34e0a1"/><text x="12" y="16" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">TA</text></svg>
-    TripAdvisor
+    Facebook <span class="soon">Coming soon</span>
   </div>
 </div>
 
@@ -475,9 +522,9 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
     <h2 class="sh">Set it up once. It handles itself.</h2>
     <p class="sp" style="margin:0 auto">Connect your accounts in minutes. From that point on, Nakoa runs completely on autopilot.</p>
     <div class="steps">
-      <div class="step"><div class="step-num">1</div><h3>Connect your profiles</h3><p>Link Google Business, Yelp, and Facebook with two clicks each. No technical knowledge needed — just authorize and you're done.</p></div>
+      <div class="step"><div class="step-num">1</div><h3>Connect Google</h3><p>Link your Google Business Profile in two clicks — no technical knowledge needed. Yelp and Facebook are coming soon.</p></div>
       <div class="step"><div class="step-num">2</div><h3>Set your voice</h3><p>Tell us your business tone — friendly, professional, or casual. Set alert thresholds and response preferences in under 3 minutes.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>We handle everything</h3><p>Every review gets an AI-drafted response in your voice. Approve with one click or set auto-post. Alerts fire the instant something needs attention.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>We handle everything</h3><p>Every review gets an AI-drafted response in your voice. Approve with one click or set auto-post. Insights, trends, and alerts surface automatically.</p></div>
     </div>
   </div>
 </section>
@@ -493,15 +540,22 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         <div class="feat-ico">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e6ef4" stroke-width="2" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <h3>AI response drafting</h3>
-        <p>Every review — glowing 5-star or brutal 1-star — gets a thoughtful, personalized response drafted instantly. Trained on your business name, tone, and context. Review and post in one click, or let it auto-publish. No more staring at a blank screen at midnight wondering what to write.</p>
+        <h3>The best AI responses, period</h3>
+        <p>Every review — glowing 5-star or brutal 1-star — gets a thoughtful, personalized reply drafted instantly. Trained on your business name, tone, and context. Review and post in one click, or let it auto-publish. No more staring at a blank screen at midnight wondering what to write.</p>
       </div>
       <div class="feat-card">
         <div class="feat-ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e6ef4" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e6ef4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg>
         </div>
-        <h3>24/7 monitoring</h3>
-        <p>Google, Yelp, Facebook, and TripAdvisor monitored around the clock. Never miss a new review.</p>
+        <h3>AI Insights</h3>
+        <p>AI reads every review and surfaces what matters: recurring praise and complaints, rating trends over time, and a prioritized list of what to act on next.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e6ef4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+        </div>
+        <h3>Competitor tracking</h3>
+        <p>Add the businesses down the street and see their live Google rating and review count next to yours — so you always know exactly where you stand.</p>
       </div>
       <div class="feat-card">
         <div class="feat-ico">
@@ -512,17 +566,17 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
       </div>
       <div class="feat-card">
         <div class="feat-ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e6ef4" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>24/7 Google monitoring</h3>
+        <p>Your Google reviews watched around the clock — never miss a new one. Yelp and Facebook coming soon.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-ico">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e6ef4" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
         <h3>Weekly sentiment reports</h3>
         <p>Every Monday: rating trends, top complaints, top praise, and what to act on. Clean and actionable.</p>
-      </div>
-      <div class="feat-card">
-        <div class="feat-ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e6ef4" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        </div>
-        <h3>Unified dashboard</h3>
-        <p>All your reviews across every platform in one clean view. No tab-switching. No multiple logins.</p>
       </div>
       <div class="feat-card">
         <div class="feat-ico">
@@ -532,6 +586,16 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         <p>Set your brand voice once. Every AI draft sounds exactly like you — consistent across every review.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- MID-PAGE CTA -->
+<section class="midcta">
+  <div class="midcta-inner">
+    <h2>See it working on your reviews today.</h2>
+    <p>Connect Google in five minutes and watch Nakoa draft your first responses, surface your insights, and size up your competition.</p>
+    <a href="https://app.nakoa.ai/signup" class="btn-white">Start free trial →</a>
+    <div class="reassure"><span class="rc">✓</span> No credit card <span class="rs">·</span> <span class="rc">✓</span> 14-day free trial <span class="rs">·</span> <span class="rc">✓</span> Cancel anytime</div>
   </div>
 </section>
 
@@ -581,7 +645,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Google + Yelp + Facebook
+          Google Business <span class="soon">Yelp &amp; Facebook soon</span>
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -593,11 +657,15 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Sentiment trend dashboard
+          AI Insights — themes, trends &amp; actions
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           Custom response tone
+        </div>
+        <div class="price-li">
+          <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Competitor rating tracking
         </div>
         <a href="https://app.nakoa.ai/signup" class="price-btn solid">Start free trial</a>
       </div>
@@ -612,7 +680,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          All platforms + TripAdvisor
+          Everything in Growth, plus:
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -624,7 +692,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Competitor review tracking
+          Competitor rating tracking
         </div>
         <div class="price-li">
           <div class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -637,54 +705,40 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- WHY NAKOA -->
 <section class="sec sec-alt">
   <div class="mw">
-    <span class="eyebrow"><span class="eyebrow-dot"></span>From our customers</span>
-    <h2 class="sh">Businesses that made the switch.</h2>
-    <div class="testi-grid">
-      <div class="testi">
-        <div class="testi-stars">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testi-q">"We used to respond to maybe 1 in 5 reviews. Now every single one gets a thoughtful reply within hours. Our Google rating climbed from 4.1 to 4.7 in two months."</p>
-        <div class="testi-who">
-          <div class="testi-av" style="background:linear-gradient(135deg,#2563eb,#0d9488)">KL</div>
-          <div><div class="testi-name">Karen L.</div><div class="testi-biz">Owner, The Local Plate</div></div>
-        </div>
+    <span class="eyebrow"><span class="eyebrow-dot"></span>Why Nakoa</span>
+    <h2 class="sh">Enterprise-grade reputation tools,<br>without the enterprise act.</h2>
+    <p class="sp">The big platforms were built for agencies and national chains — priced and bloated to match. Nakoa is AI-native and Google-first, built for the owner who just wants their reviews handled brilliantly.</p>
+    <div class="why-grid">
+      <div class="why-card them">
+        <h3>The big players</h3>
+        <div class="why-sub">Birdeye, Podium &amp; the enterprise suites</div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Built for agencies and national chains</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>$300–$500+/mo, often on an annual contract</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Generic, templated auto-replies</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>A sales call and weeks of onboarding to start</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink-4)" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Sprawling suites you'll use a fraction of</span></div>
       </div>
-      <div class="testi">
-        <div class="testi-stars">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testi-q">"The negative review alerts are a game changer. I found out about a bad experience within 10 minutes and called the customer directly. They changed their review to 5 stars."</p>
-        <div class="testi-who">
-          <div class="testi-av" style="background:linear-gradient(135deg,#7c3aed,#db2777)">MT</div>
-          <div><div class="testi-name">Marcus T.</div><div class="testi-biz">Manager, Metro Fitness Club</div></div>
-        </div>
+      <div class="why-card us">
+        <div class="why-badge">Recommended</div>
+        <h3>Nakoa</h3>
+        <div class="why-sub">AI-native · Google-first · built for local</div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>The best AI responses, in your exact voice</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>AI Insights + live competitor tracking, included</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>From $49/mo, month-to-month, cancel anytime</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Live in 5 minutes — no demo, no sales call</span></div>
+        <div class="why-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Focused and Google-first — nothing you won't use</span></div>
       </div>
-      <div class="testi">
-        <div class="testi-stars">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testi-q">"Setup took 4 minutes. I connected Google and Yelp, chose my tone, and it's been running itself ever since. Honestly the best $99 I spend every month."</p>
-        <div class="testi-who">
-          <div class="testi-av" style="background:linear-gradient(135deg,#d97706,#dc2626)">SR</div>
-          <div><div class="testi-name">Sandra R.</div><div class="testi-biz">Owner, Refresh Salon &amp; Spa</div></div>
-        </div>
+    </div>
+    <div class="founding">
+      <div class="founding-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/></svg></div>
+      <div class="founding-txt">
+        <h3>Founding-customer program — open now</h3>
+        <p>We're onboarding our first businesses. Join early to lock in launch pricing for life, get a direct line to the founders, and help shape what we build next.</p>
       </div>
+      <a href="https://app.nakoa.ai/signup" class="btn-lg primary">Become a founding customer</a>
     </div>
   </div>
 </section>
@@ -697,7 +751,7 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
     <div class="faq-grid">
       <div class="faq-item"><div class="faq-q">Does it actually post responses automatically?</div><div class="faq-a">On the Growth and Pro plans you can choose: either approve each draft with one click, or turn on auto-post and it publishes automatically. You're always in control.</div></div>
       <div class="faq-item"><div class="faq-q">How does it sound like my business?</div><div class="faq-a">During setup you choose your tone and enter details about your business. Every AI draft is generated with that context baked in — the more you tell us, the better it sounds like you.</div></div>
-      <div class="faq-item"><div class="faq-q">Which review platforms are supported?</div><div class="faq-a">Google Business Profile is live now. Yelp and Facebook are coming soon. TripAdvisor and OpenTable are on the roadmap for restaurant customers.</div></div>
+      <div class="faq-item"><div class="faq-q">Which review platforms are supported?</div><div class="faq-a">Google Business Profile is live today — where the reviews that matter most to local businesses live. Yelp and Facebook are coming soon, and we're going deep on Google first rather than spreading thin across platforms that barely move the needle.</div></div>
       <div class="faq-item"><div class="faq-q">What happens after the 14-day trial?</div><div class="faq-a">You'll be prompted to enter a payment method. If you don't, your account pauses — no charges, no drama. No credit card is required to start.</div></div>
       <div class="faq-item"><div class="faq-q">Can I manage multiple locations?</div><div class="faq-a">Yes. Growth supports up to 3 locations and Pro supports up to 10. Each location gets its own monitoring, alerts, and response settings from a single dashboard.</div></div>
       <div class="faq-item"><div class="faq-q">Is there a setup fee or contract?</div><div class="faq-a">No setup fee, no contracts, no commitments. Month-to-month. Cancel anytime from your dashboard in under 30 seconds.</div></div>
@@ -708,9 +762,10 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:32p
 <!-- FINAL CTA -->
 <section class="sec" style="padding-top:0">
   <div class="cta-wrap">
-    <h2>Your reputation is your<br>most valuable asset.</h2>
-    <p>Don't leave it unprotected. Join local businesses using Nakoa to respond faster, rank higher, and win more customers.</p>
-    <a href="https://app.nakoa.ai/signup" class="btn-white">Start your free 14-day trial →</a>
+    <h2>Your Google reputation,<br>finally on autopilot.</h2>
+    <p>Join the local businesses letting Nakoa respond faster, rank higher, and win more customers — automatically.</p>
+    <a href="https://app.nakoa.ai/signup" class="btn-white">Start free trial →</a>
+    <div class="reassure"><span class="rc">✓</span> No credit card <span class="rs">·</span> <span class="rc">✓</span> 14-day free trial <span class="rs">·</span> <span class="rc">✓</span> Cancel anytime</div>
   </div>
 </section>
 
